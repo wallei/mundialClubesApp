@@ -1,0 +1,68 @@
+/* Estilos generales */
+.clubes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Grid de clubes */
+.clubes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Tarjeta de club */
+.club-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo genérico */
+.club-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+/* Información del club */
+.club-info h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.club-info p {
+  color: #34495e;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.club-info p strong {
+  color: #3498db;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .clubes-grid {
+    grid-template-columns: 1fr;
+  }
+}
