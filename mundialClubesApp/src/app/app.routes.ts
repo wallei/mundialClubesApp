@@ -1,4 +1,4 @@
-//maneja todas las rutas de la aplicacion.
+// app.routes.ts maneja todas las rutas de la aplicacion.
 // las rutas son objetos, primero tienen el path.
 // usamos lazy loading para cargar los componentes solo cuando se necesiten.
 
@@ -13,11 +13,10 @@ import { JugadoresDetallesComponent } from './componentes/jugadores-detalles/jug
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./componentes/inicio/inicio.component').then(m => m.InicioComponent) },
    { path: 'clubes', loadComponent: () => import('./componentes/clubes/clubes.component').then(m => m.ClubesComponent) },
-   { path: 'clubes-detalles', loadComponent: () => import('./componentes/clubes-detalles/clubes-detalles.component').then(m => m.ClubesDetallesComponent) },
+   { path: 'clubes/:id', loadComponent: () => import('./componentes/clubes-detalles/clubes-detalles.component').then(m => m.ClubesDetallesComponent) },
    { path: 'contacto', loadComponent: () => import('./componentes/contacto/contacto.component').then(m => m.ContactoComponent) },
    { path: 'jugadores', loadComponent: () => import('./componentes/jugadores/jugadores.component').then(m => m.JugadoresComponent) },
-   { path: 'jugadores-detalles', loadComponent: () => import('./componentes/jugadores-detalles/jugadores-detalles.component').then(m => m.JugadoresDetallesComponent) },
-   { path: '**', redirectTo: '' } // redirige a inicio si la ruta no existe
-   
+   { path: 'jugadores/:id', loadComponent: () => import('./componentes/jugadores-detalles/jugadores-detalles.component').then(m => m.JugadoresDetallesComponent) },
+   { path: '**', redirectTo: '', pathMatch: 'full' } // redirige a inicio si la ruta no existe
 
 ];
