@@ -17,6 +17,7 @@ export const routes: Routes = [
    { path: 'contacto', loadComponent: () => import('./componentes/contacto/contacto.component').then(m => m.ContactoComponent) },
    { path: 'jugadores', loadComponent: () => import('./componentes/jugadores/jugadores.component').then(m => m.JugadoresComponent) },
    { path: 'jugadores/:id', loadComponent: () => import('./componentes/jugadores-detalles/jugadores-detalles.component').then(m => m.JugadoresDetallesComponent) },
+   { path: 'partidos', loadComponent: () => import('./componentes/partidos/partidos.component').then(m => m.PartidosComponent) },
    { path: '**', redirectTo: '', pathMatch: 'full' } // redirige a inicio si la ruta no existe
 
 ];
