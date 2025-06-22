@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { listaClubes } from './clubes.mocks';
+
+// import listaProductos
 
 @Component({
   selector: 'app-clubes',
@@ -8,4 +11,9 @@ import { Component } from '@angular/core';
 })
 export class ClubesComponent {
 
+  //propiedad mia del componente para guardar lo que importe
+ // listaDeProductos= listaProductos
+  listaDeClubes = listaClubes
+
+  
 }

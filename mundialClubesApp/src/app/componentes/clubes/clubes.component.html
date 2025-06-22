@@ -1,1 +1,23 @@
-<p>clubes works!</p>
+<h1>Listado de Clubes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>pais</th>
+            <th>liga</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (club of listaDeClubes; track club.id) {
+            <tr>
+                <td>{{ club.id }}</td>
+                <td>{{ club.nombre }}</td>
+                <td>{{ club.pais }}</td>
+                <td>{{ club.liga }}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
