@@ -13,7 +13,7 @@ export class ClubesComponent {
 
   //propiedad mia del componente para guardar lo que importe
  // listaDeProductos= listaProductos
-  listaDeClubes = listaClubes
+  listaClubes = listaClubes;
 
   
 }

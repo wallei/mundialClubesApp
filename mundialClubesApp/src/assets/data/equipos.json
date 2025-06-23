@@ -1,0 +1,46 @@
+{
+  "clubes": [
+    {
+      "id": 1,
+      "nombre": "Boca Juniors",
+      "pais": "Argentina",
+      "liga": "Liga Profesional",
+      "escudo": "assets/images/boca.png",
+      "dt": "Diego Martínez",
+      "jugadores": [
+        {"id": 1, "nombre": "Sergio Romero", "posicion": "Arquero"},
+        {"id": 2, "nombre": "Luis Advíncula", "posicion": "Defensor"},
+        {"id": 3, "nombre": "Nicolás Figal", "posicion": "Defensor"},
+        {"id": 4, "nombre": "Marcos Rojo", "posicion": "Defensor"},
+        {"id": 5, "nombre": "Frank Fabra", "posicion": "Defensor"},
+        {"id": 6, "nombre": "Pol Fernández", "posicion": "Mediocampista"},
+        {"id": 7, "nombre": "Alan Varela", "posicion": "Mediocampista"},
+        {"id": 8, "nombre": "Juan Ramírez", "posicion": "Mediocampista"},
+        {"id": 9, "nombre": "Sebastián Villa", "posicion": "Delantero"},
+        {"id": 10, "nombre": "Darío Benedetto", "posicion": "Delantero"},
+        {"id": 11, "nombre": "Luis Vázquez", "posicion": "Delantero"}
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "River Plate",
+      "pais": "Argentina",
+      "liga": "Liga Profesional",
+      "escudo": "assets/images/river.png",
+      "dt": "Martín Demichelis",
+      "jugadores": [
+        {"id": 12, "nombre": "Franco Armani", "posicion": "Arquero"},
+        {"id": 13, "nombre": "Milton Casco", "posicion": "Defensor"},
+        {"id": 14, "nombre": "Paulo Díaz", "posicion": "Defensor"},
+        {"id": 15, "nombre": "Leandro González Pirez", "posicion": "Defensor"},
+        {"id": 16, "nombre": "Enzo Díaz", "posicion": "Defensor"},
+        {"id": 17, "nombre": "Enzo Pérez", "posicion": "Mediocampista"},
+        {"id": 18, "nombre": "Rodrigo Aliendro", "posicion": "Mediocampista"},
+        {"id": 19, "nombre": "Ignacio Fernández", "posicion": "Mediocampista"},
+        {"id": 20, "nombre": "Esequiel Barco", "posicion": "Delantero"},
+        {"id": 21, "nombre": "Miguel Borja", "posicion": "Delantero"},
+        {"id": 22, "nombre": "Salomón Rondón", "posicion": "Delantero"}
+      ]
+    }
+  ]
+}
