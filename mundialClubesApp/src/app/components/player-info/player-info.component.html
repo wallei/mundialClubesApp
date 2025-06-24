@@ -1,0 +1,50 @@
+<div class="player-container">
+  <div *ngIf="loading" class="loading">Cargando información del jugador...</div>
+  
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <div *ngIf="player && !loading" class="player-card">
+    <div class="player-header">
+      <h2>{{ player.strPlayer }}</h2>
+      <div class="player-basic-info">
+        <span class="team">{{ player.strTeam }}</span>
+        <span class="position">{{ player.strPosition }}</span>
+      </div>
+    </div>
+
+    <div class="player-content">
+      <div class="player-image">
+        <img [src]="player.strThumb || 'assets/player-placeholder.png'" [alt]="player.strPlayer">
+      </div>
+      
+      <div class="player-details">
+        <div class="detail">
+          <span class="label">Nacionalidad:</span>
+          <span class="value">{{ player.strNationality }}</span>
+        </div>
+        
+        <div class="detail">
+          <span class="label">Fecha de nacimiento:</span>
+          <span class="value">{{ player.dateBorn | date:'longDate' }} ({{ getAge(player.dateBorn) }} años)</span>
+        </div>
+        
+        <div class="detail">
+          <span class="label">Deporte:</span>
+          <span class="value">{{ player.strSport }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="player.strDescriptionES" class="player-bio">
+      <h3>Biografía</h3>
+      <p>{{ player.strDescriptionES }}</p>
+    </div>
+    
+    <div *ngIf="player.strDescriptionEN && !player.strDescriptionES" class="player-bio">
+      <h3>Biography</h3>
+      <p>{{ player.strDescriptionEN }}</p>
+    </div>
+  </div>
+</div>

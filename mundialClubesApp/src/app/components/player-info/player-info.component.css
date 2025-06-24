@@ -1,0 +1,143 @@
+.player-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  color: #e74c3c;
+  background-color: #fde8e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.player-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.player-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.player-header h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.player-basic-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.player-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.player-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.player-image img {
+  max-width: 250px;
+  border-radius: 8px;
+  border: 3px solid #f1f1f1;
+}
+
+.player-details {
+  flex: 1;
+}
+
+.detail {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.label {
+  font-weight: bold;
+  color: #2c3e50;
+  min-width: 150px;
+  margin-right: 1rem;
+}
+
+.value {
+  color: #34495e;
+  flex: 1;
+}
+
+.player-bio {
+  padding: 0 2rem 2rem;
+  margin-top: 1rem;
+}
+
+.player-bio h3 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.team {
+  background-color: #3498db;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.position {
+  background-color: #e74c3c;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .player-content {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .player-image {
+    margin-bottom: 0;
+    flex: 0 0 250px;
+  }
+}
+
+/* Estilos para cuando no hay imagen */
+.player-image img[src*='placeholder'] {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
