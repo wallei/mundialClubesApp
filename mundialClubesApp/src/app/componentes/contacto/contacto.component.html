@@ -49,5 +49,15 @@
 
 
 </div>
+
+<div class="mb-3">
+  <label for="mensaje" class="form-label">Tu mensaje</label>
+  <textarea class="form-control" id="mensaje" rows="3" [(ngModel)]="usuario.mensaje" name="mensaje" required #mensaje="ngModel" [ngClass]="{'is-invalid': mensaje.invalid && mensaje.touched}"></textarea>
+  
+  @if(mensaje.errors?.['required'] && mensaje.touched){
+    <div class="text-danger">Por favor ingresa tu mensaje.</div>
+  }
+</div>
+
 <button type="submit" class="btn btn-primary" [disabled]="miFormulario.invalid">Enviar</button>
 </form>

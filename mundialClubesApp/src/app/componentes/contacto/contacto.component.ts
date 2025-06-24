@@ -16,6 +16,7 @@ export class ContactoComponent {
     nombre:'',
     email:'',
     fanDe:'',
+    mensaje:''
   };
 
   enviar() {
