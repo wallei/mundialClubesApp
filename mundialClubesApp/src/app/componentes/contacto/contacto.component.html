@@ -1,1 +1,53 @@
-<p>contacto works!</p>
+<!--Formulario plantilla-->
+
+<form #miFormulario="ngForm" (ngSubmit)="enviar()">
+
+<div class="mb-3">
+<label for="nombre" class="form-label">Nombre</label>
+<input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required minlength="3" #nombre="ngModel" [ngClass]="{'is-invalid': nombre.invalid && nombre.touched}">
+</div>
+
+@if(nombre.errors?.['minlength'] && nombre.touched){
+  <div class="text-danger">Minimo tres caracteres</div>
+}
+@if(nombre.errors?.['required'] && nombre.touched){
+  <div class="text-danger">Nombre requerido.</div>
+}
+
+<div class="mb-3">
+<label for="email" class="form-label">Email</label>
+<input type="email" class="form-control" id="email" [(ngModel)]="usuario.email" name="email" required #email="ngModel" [ngClass]="{'is-invalid': email.invalid && email.touched}">
+
+
+@if(email.errors?.['required'] && email.touched){
+  <div class="text-danger">Ingrese un Email.</div>
+}
+
+
+<div class="mb-3">
+<label for="fanDe" class="form-label">Fanatico de:</label>
+<select type="text" class="form-select" id="fanDe"[(ngModel)]="usuario.fanDe" name="fanDe" required  #fanDe="ngModel" [ngClass]="{'is-invalid': fanDe.invalid && fanDe.touched}">
+  <option disabled selected value="">-- Seleccioná un club --</option>
+  <option value="Manchester City">Manchester City (Inglaterra)</option>
+  <option value="Real Madrid">Real Madrid (España)</option>
+  <option value="Flamengo">Flamengo (Brasil)</option>
+  <option value="Palmeiras">Palmeiras (Brasil)</option>
+  <option value="Chelsea">Chelsea (Inglaterra)</option>
+  <option value="Al Ahly">Al Ahly (Egipto)</option>
+  <option value="Wydad Casablanca">Wydad Casablanca (Marruecos)</option>
+  <option value="Seattle Sounders">Seattle Sounders (EE.UU.)</option>
+  <option value="León">Boca Juniors (Argentina)</option>
+  <option value="Al Hilal">Al Hilal (Arabia Saudita)</option>
+  <option value="Urawa Red Diamonds">Urawa Red Diamonds (Japón)</option>
+  <option value="Auckland City">Auckland City (Nueva Zelanda)</option>
+</select>
+</div>
+
+@if(fanDe.errors?.['required'] && fanDe.touched){
+  <div class="text-danger">Ingrese un Equipo.</div>
+}
+
+
+</div>
+<button type="submit" class="btn btn-primary" [disabled]="miFormulario.invalid">Enviar</button>
+</form>
